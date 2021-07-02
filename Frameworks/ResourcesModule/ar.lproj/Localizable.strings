@@ -1,0 +1,27 @@
+/*
+ Localizable.strings
+ TemplateApp
+ 
+ Created by Ahmad Mahmoud on 21/02/2021.
+ 
+ */
+
+// Common strings
+"na" = "N/A";
+"currency_symbol" = "EGP";
+"something_went_wrong" = "Something went wrong";
+"unknown_error_message" = "An error has occurred, please reload the page";
+"reload_page" = "Reload page";
+"check_internet_connection" = "Check internet connection and try again";
+"guest_user_unsupported_feature" = "Guest user unsupported feature";
+"try_again" = "Try Again";
+"am" = "Am";
+"pm" = "Pm";
+"Arabic" = "عربي";
+"English" = "English";
+
+// Tabbar
+"tabbar_home_item_title" = "Home";
+"tabbar_menu_item_title" = "Menu";
+"tabbar_orders_item_title" = "Orders";
+"tabbar_profile_item_title" = "Profile";

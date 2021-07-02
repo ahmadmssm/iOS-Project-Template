@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cera_Pro_Bold.ttf">
+            <string>CeraPRO-Bold</string>
+        </array>
+        <array key="Cera_Pro_Regular.ttf">
+            <string>CeraPRO-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewController" customModule="CustomComponentsModule" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="83a-GV-Q4G" id="VQL-DX-5Ay"/>
+                <outlet property="cardView" destination="lra-Ii-JXW" id="UCO-uk-ViJ"/>
+                <outlet property="okButton" destination="cSW-Ab-HsD" id="ank-nO-V0w"/>
+                <outlet property="primaryLabel" destination="XhY-jC-RQu" id="2ub-Oi-Rm5"/>
+                <outlet property="secondaryLabel" destination="gEH-uQ-7pd" id="5UZ-w2-AvS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lra-Ii-JXW">
+                    <rect key="frame" x="23" y="254" width="368" height="284"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gn-po-1QL">
+                            <rect key="frame" x="322" y="13" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="Fvh-At-R8N"/>
+                                <constraint firstAttribute="width" constant="33" id="pxg-aY-sWk"/>
+                            </constraints>
+                            <state key="normal" image="image_fallback" backgroundImage="Icon_close"/>
+                            <connections>
+                                <action selector="closeButtonAction:" destination="-1" eventType="touchUpInside" id="pzc-pP-XlN"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhY-jC-RQu">
+                            <rect key="frame" x="62" y="45" width="244" height="18"/>
+                            <fontDescription key="fontDescription" name="CeraPRO-Regular" family="CeraPRO-Regular" pointSize="18"/>
+                            <color key="textColor" name="DavyGrey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEH-uQ-7pd">
+                            <rect key="frame" x="162" y="84" width="44.5" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <color key="highlightedColor" name="DarkBlack"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSW-Ab-HsD">
+                            <rect key="frame" x="22" y="140" width="328" height="46"/>
+                            <color key="backgroundColor" name="WineRed"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="46" id="rqF-Sd-fpo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CeraPRO-Bold" family="CeraPRO-Bold" pointSize="14"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="okButtonAction:" destination="-1" eventType="touchUpInside" id="8L7-rU-2ys"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83a-GV-Q4G">
+                            <rect key="frame" x="22" y="206" width="328" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="46" id="Wsw-z9-riG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CeraPRO-Bold" family="CeraPRO-Bold" pointSize="14"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" name="DarkBlack"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="-1" eventType="touchUpInside" id="lb4-cj-lbY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="9gn-po-1QL" secondAttribute="trailing" constant="13" id="Fgo-2v-LvK"/>
+                        <constraint firstItem="XhY-jC-RQu" firstAttribute="top" secondItem="lra-Ii-JXW" secondAttribute="top" constant="45" id="JVx-94-vYh"/>
+                        <constraint firstAttribute="trailing" secondItem="XhY-jC-RQu" secondAttribute="trailing" constant="62" id="KFA-E5-SgQ"/>
+                        <constraint firstItem="gEH-uQ-7pd" firstAttribute="centerX" secondItem="lra-Ii-JXW" secondAttribute="centerX" id="M0M-Kt-23B"/>
+                        <constraint firstItem="83a-GV-Q4G" firstAttribute="leading" secondItem="lra-Ii-JXW" secondAttribute="leading" constant="22" id="Md6-dX-oaB"/>
+                        <constraint firstItem="cSW-Ab-HsD" firstAttribute="leading" secondItem="lra-Ii-JXW" secondAttribute="leading" constant="22" id="QBT-GG-JZA"/>
+                        <constraint firstAttribute="trailing" secondItem="83a-GV-Q4G" secondAttribute="trailing" constant="18" id="SdA-5p-OdP"/>
+                        <constraint firstItem="83a-GV-Q4G" firstAttribute="top" secondItem="cSW-Ab-HsD" secondAttribute="bottom" constant="20" id="UQD-l3-c4h"/>
+                        <constraint firstItem="cSW-Ab-HsD" firstAttribute="top" secondItem="gEH-uQ-7pd" secondAttribute="bottom" constant="35" id="Yg0-R8-PRn"/>
+                        <constraint firstItem="gEH-uQ-7pd" firstAttribute="top" secondItem="XhY-jC-RQu" secondAttribute="bottom" constant="21" id="ZVp-jN-0hE"/>
+                        <constraint firstItem="XhY-jC-RQu" firstAttribute="leading" secondItem="lra-Ii-JXW" secondAttribute="leading" constant="62" id="Zci-xp-rH8"/>
+                        <constraint firstAttribute="bottom" secondItem="83a-GV-Q4G" secondAttribute="bottom" constant="32" id="gFo-Iy-6P4"/>
+                        <constraint firstAttribute="trailing" secondItem="cSW-Ab-HsD" secondAttribute="trailing" constant="18" id="hAq-2a-US0"/>
+                        <constraint firstItem="9gn-po-1QL" firstAttribute="top" secondItem="lra-Ii-JXW" secondAttribute="top" constant="13" id="hQY-5G-jLm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lra-Ii-JXW" secondAttribute="trailing" constant="23" id="Det-dz-hGz"/>
+                <constraint firstItem="lra-Ii-JXW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="23" id="Ngw-Sd-rbx"/>
+                <constraint firstItem="lra-Ii-JXW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="210" id="uO1-Ca-ecn"/>
+            </constraints>
+            <point key="canvasLocation" x="34.782608695652179" y="103.79464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon_close" width="33" height="33"/>
+        <image name="image_fallback" width="94" height="87"/>
+        <namedColor name="DarkBlack">
+            <color red="0.0039215686274509803" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DavyGrey">
+            <color red="0.35294117647058826" green="0.35294117647058826" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WineRed">
+            <color red="0.57647058823529407" green="0.039215686274509803" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

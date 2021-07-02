@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1250"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DCB83A4325DBE880008E9F63"
+               BuildableName = "TemplateApp.app"
+               BlueprintName = "TemplateApp"
+               ReferencedContainer = "container:TemplateApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Staging"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC9D26BC25E562B1002B9A51"
+               BuildableName = "CustomComponentsModuleTests.xctest"
+               BlueprintName = "CustomComponentsModuleTests"
+               ReferencedContainer = "container:TemplateApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DCB83BC125DBF6F9008E9F63"
+               BuildableName = "CoreModuleTests.xctest"
+               BlueprintName = "CoreModuleTests"
+               ReferencedContainer = "container:TemplateApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DCB83B9B25DBF6E4008E9F63"
+               BuildableName = "DataModuleTests.xctest"
+               BlueprintName = "DataModuleTests"
+               ReferencedContainer = "container:TemplateApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC22D51725E015B40025ECF2"
+               BuildableName = "ExtensionsModuleTests.xctest"
+               BlueprintName = "ExtensionsModuleTests"
+               ReferencedContainer = "container:TemplateApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC9992D526728D0D00402637"
+               BuildableName = "ServicesModuleTests.xctest"
+               BlueprintName = "ServicesModuleTests"
+               ReferencedContainer = "container:TemplateApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC99935726737D1D00402637"
+               BuildableName = "MVVMModuleTests.xctest"
+               BlueprintName = "MVVMModuleTests"
+               ReferencedContainer = "container:TemplateApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC2E424F2679971D00693C27"
+               BuildableName = "AppCoreFeaturesTests.xctest"
+               BlueprintName = "AppCoreFeaturesTests"
+               ReferencedContainer = "container:TemplateApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Staging"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DCB83A4325DBE880008E9F63"
+            BuildableName = "TemplateApp.app"
+            BlueprintName = "TemplateApp"
+            ReferencedContainer = "container:TemplateApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Staging"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DCB83A4325DBE880008E9F63"
+            BuildableName = "TemplateApp.app"
+            BlueprintName = "TemplateApp"
+            ReferencedContainer = "container:TemplateApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Staging">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Staging"
+      revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "LOGFILE=&quot;${ARCHIVE_PATH}/static-frameworks.log&quot;&#10;echo &quot;Removing static frameworks from ${WRAPPER_NAME} archive&quot; &gt; $LOGFILE&#10;find &quot;${ARCHIVE_PRODUCTS_PATH}/Applications/${WRAPPER_NAME}&quot; -name &apos;*.framework&apos; -print0 | while IFS= read -r -d &apos;&apos; fm; do&#10;    name=$(basename &quot;${fm}&quot; .framework)&#10;    target=&quot;${fm}/${name}&quot;&#10;    echo &quot;Checking: ${fm}&quot; &gt;&gt; $LOGFILE&#10;    if file &quot;${target}&quot; | grep -q &quot;current ar archive&quot;; then&#10;        rm -rf &quot;${fm}&quot;&#10;        echo &quot;Removed static framework: ${fm}&quot; &gt;&gt; $LOGFILE&#10;    fi&#10;done&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "DCB83A4325DBE880008E9F63"
+                     BuildableName = "TemplateApp.app"
+                     BlueprintName = "TemplateApp"
+                     ReferencedContainer = "container:TemplateApp.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+   </ArchiveAction>
+</Scheme>

@@ -1,0 +1,20 @@
+//
+//  Production.xcconfig
+//  Magento kernel
+//
+//  Created by Ahmad Mahmoud on 04/03/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://www.appcoda.com/xcconfig-guide/
+// https://help.apple.com/xcode/#/dev745c5c974
+OTHER_SWIFT_FLAGS =  -DPRODUCTION
+// Environment variables
+APP_NAME = TemplateApp
+APP_VERSION = 1.0
+APP_BUILD_NUMBER = 1.0.0.0
+APP_BASE_URL = www.google2.com/
+APP_CORE_DATA_CONTAINER_NAME = AppDataBase
+
+PRODUCT_BUNDLE_IDENTIFIER = com.ams.templateApp
+GOOGLE_SERVICE_INFO_PLIST_FILENAME = GoogleService-Info-Production
