@@ -10,8 +10,9 @@ import CoreModule
 import ServicesModule
 import CustomComponentsModule
 import AppCoreFeatures
+import ExamplesFeature
 
-public class MainNavigator: BaseAppDelegateConfig, MainNavigatorProtocol {
+public class MainNavigator: BaseAppDelegateConfig, MainNavigatorProtocol, ExamplesNavigatorProtocol {
     
     private(set) public var window: UIWindow!
     
@@ -39,5 +40,11 @@ public class MainNavigator: BaseAppDelegateConfig, MainNavigatorProtocol {
                 self.window.rootViewController = rootViewController
                 self.window.makeKeyAndVisible()
             }, completion: nil)
+    }
+    
+    public func openCoreDataExample(from viewController: UIViewController) {
+        let navigator: ExamplesNavigatorProtocol = DependencyResolver.resolve()
+        let destinationViewController = MyViewController.create(navigator: navigator)
+        self.push(from: viewController, destinationViewController: destinationViewController)
     }
 }

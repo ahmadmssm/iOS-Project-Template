@@ -10,4 +10,5 @@ import UIKit
 public protocol MainNavigatorProtocol: NavigationServiceProtocol {
     var window: UIWindow! { get }
     func startInitialViewController()
+    func openCoreDataExample(from viewController: UIViewController)
 }

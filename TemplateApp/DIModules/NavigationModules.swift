@@ -11,5 +11,6 @@ import ServicesModule
 extension Resolver {
     static func registerNavigationModules() {
         register { MainNavigator() }.implements(MainNavigatorProtocol.self).scope(.application)
+        register { ExamplesNavigator() as ExamplesNavigatorProtocol }
     }
 }

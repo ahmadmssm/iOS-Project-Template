@@ -8,9 +8,11 @@
 import DataModule
 import CoreModule
 import AppCoreFeatures
+import ExamplesFeature
 
 extension Resolver {
     static func registerViewModelModules() {
         register { TestViewModel() }
+        register { MyViewModel() }
     }
 }
