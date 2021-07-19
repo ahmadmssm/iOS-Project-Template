@@ -71,5 +71,9 @@
 	<string>Light</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Needed to get location latitude and longitude for testing purposes</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Needed to get location latitude and longitude for testing purposes</string>
 </dict>
 </plist>

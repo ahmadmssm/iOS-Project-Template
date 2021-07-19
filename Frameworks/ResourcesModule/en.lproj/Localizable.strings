@@ -30,3 +30,9 @@
 "authentication_scene_email_error" = "Invalid email";
 "authentication_scene_phone_error" = "Invalid mobile number";
 "authentication_scene_password_error" = "Invalid password";
+
+//
+"change_lng" = "Switch language";
+"home" = "Home";
+"trending_movies" = "Trending movies";
+"world_countries" = "World countries";

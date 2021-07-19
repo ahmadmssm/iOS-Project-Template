@@ -9,12 +9,13 @@ import UIKit
 import DataModule
 import CoreData
 import CoreModule
+import ServicesModule
 import CustomComponentsModule
 
 extension Resolver {
     static func registerOtherModules() {
         register { _ -> UIWindow in
-            let navigator: MainNavigator = resolve()
+            let navigator: MainNavigatorProtocol = resolve()
             return navigator.window
         }
         register { _ -> NSManagedObjectContext in
@@ -24,9 +25,6 @@ extension Resolver {
         register {
             NetworkLoaderOverlay(backgroundColor: .transparentBlack)
         }.scope(.application)
-        register { EmailValidator() }
-        register { PasswordValidator() }
-        register { PhoneNumberValidator() }
         register { AppLanguageManager() as LanguageManagerProtocol }.scope(.application)
     }
 }

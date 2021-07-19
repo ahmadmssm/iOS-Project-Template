@@ -43,7 +43,7 @@ public class MainNavigator: BaseAppDelegateConfig, MainNavigatorProtocol, Exampl
     }
     
     public func openCoreDataExample(from viewController: UIViewController) {
-        let navigator: ExamplesNavigatorProtocol = DependencyResolver.resolve()
+        let navigator: ExamplesNavigatorProtocol = Resolver.resolve()
         let destinationViewController = MyViewController.create(navigator: navigator)
         self.push(from: viewController, destinationViewController: destinationViewController)
     }

@@ -8,6 +8,7 @@
 import Foundation
 
 public struct Constants {
+    public static var realmDBVersion: Int { 1 }
     public static var mobileNumberMaxLength: Int { 11 }
     public static var contactUsNumber: Int { 12345 }
     //

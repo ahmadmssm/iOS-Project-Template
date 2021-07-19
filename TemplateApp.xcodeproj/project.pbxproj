@@ -22,7 +22,6 @@
 		DC22D3B425DF417F0025ECF2 /* RestConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D3B325DF417F0025ECF2 /* RestConfigs.swift */; };
 		DC22D3C925DF420B0025ECF2 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D3C825DF420B0025ECF2 /* Resolver.swift */; };
 		DC22D3D125DF42560025ECF2 /* AppDelegate+Injection..swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D3D025DF42560025ECF2 /* AppDelegate+Injection..swift */; };
-		DC22D42425DFE8250025ECF2 /* AlamofireRestClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D42325DFE8250025ECF2 /* AlamofireRestClientProtocol.swift */; };
 		DC22D54A25E0818B0025ECF2 /* NoInternetConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D54925E0818B0025ECF2 /* NoInternetConnectionError.swift */; };
 		DC22D5A725E08DB90025ECF2 /* RestModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D5A625E08DB90025ECF2 /* RestModules.swift */; };
 		DC22D5B925E08E510025ECF2 /* ViewModelModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D5B825E08E510025ECF2 /* ViewModelModules.swift */; };
@@ -30,7 +29,6 @@
 		DC22D5CD25E08E720025ECF2 /* RepositoriesModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D5CC25E08E720025ECF2 /* RepositoriesModules.swift */; };
 		DC22D5D725E08E810025ECF2 /* OtherModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D5D625E08E810025ECF2 /* OtherModules.swift */; };
 		DC22D60D25E0927C0025ECF2 /* AppRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D60025E091F10025ECF2 /* AppRestClient.swift */; };
-		DC22D67C25E095520025ECF2 /* DependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D67B25E095520025ECF2 /* DependencyResolver.swift */; };
 		DC22D69825E096CE0025ECF2 /* UnitTestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D69725E096CE0025ECF2 /* UnitTestingAppDelegate.swift */; };
 		DC22D6E225E11D810025ECF2 /* AppDelegateServicesModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D6E125E11D810025ECF2 /* AppDelegateServicesModules.swift */; };
 		DC22D6F525E122B30025ECF2 /* EnvironmentUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22D6F425E122B30025ECF2 /* EnvironmentUtils.swift */; };
@@ -90,6 +88,12 @@
 		DC520A9D268FCCC300CE3F9A /* DataModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB83B9425DBF6E4008E9F63 /* DataModule.framework */; platformFilter = ios; };
 		DC520A9E268FCCC300CE3F9A /* DataModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCB83B9425DBF6E4008E9F63 /* DataModule.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC520AA2268FCD5500CE3F9A /* ExamplesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC520AA1268FCD5500CE3F9A /* ExamplesNavigator.swift */; };
+		DC520AA92690898C00CE3F9A /* NoCancelButtonSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC520AA62690898600CE3F9A /* NoCancelButtonSearchController.swift */; };
+		DC520AAB269089AD00CE3F9A /* NoCancelButtonSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC520AAA269089AD00CE3F9A /* NoCancelButtonSearchBar.swift */; };
+		DC520AAF26909BE900CE3F9A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DC520AAE26909BE900CE3F9A /* Realm */; };
+		DC520AB126909BE900CE3F9A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC520AB026909BE900CE3F9A /* RealmSwift */; };
+		DC520AB426909C7F00CE3F9A /* RealmDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC520AB326909C7F00CE3F9A /* RealmDataStore.swift */; };
+		DC520AB72690B78C00CE3F9A /* RealmDataStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC520AB62690B78C00CE3F9A /* RealmDataStoreProtocol.swift */; };
 		DC5F0B8425ECDB1F00BB70E3 /* RxRequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F0B8225ECDB1F00BB70E3 /* RxRequestExecuter.swift */; };
 		DC5F0B8525ECDB1F00BB70E3 /* RxRequestExecuterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F0B8325ECDB1F00BB70E3 /* RxRequestExecuterProtocol.swift */; };
 		DC5F0B9325ECDB9600BB70E3 /* RxSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F0B9225ECDB9600BB70E3 /* RxSchedulers.swift */; };
@@ -170,6 +174,7 @@
 		DC746A552601653800FFB663 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = DC746A542601653800FFB663 /* RxBlocking */; };
 		DC751A56268F33A2007B9E7C /* NavigationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC751A54268F339D007B9E7C /* NavigationServiceProtocol.swift */; };
 		DC751A58268F341D007B9E7C /* NavigatableAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC751A57268F341D007B9E7C /* NavigatableAppViewController.swift */; };
+		DC7ACC1A269245820075CFFE /* CustomEncodingAndDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7ACC19269245820075CFFE /* CustomEncodingAndDecodingStrategy.swift */; };
 		DC80140A261F58B1005363E1 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC801409261F58B1005363E1 /* PasswordValidator.swift */; };
 		DC8179B825F0F56B007C2228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8179B725F0F56B007C2228 /* LaunchScreen.storyboard */; };
 		DC817A1F25F50081007C2228 /* UnManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC817A1E25F50081007C2228 /* UnManagedCache.swift */; };
@@ -329,6 +334,7 @@
 		DCC65D8F2610B6DF007412FA /* LookinServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC65D8D2610B6DF007412FA /* LookinServer.framework */; };
 		DCC65E4126133E5C007412FA /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC65E4026133E5C007412FA /* Address.swift */; };
 		DCC65E4D261353AE007412FA /* GuestUserUnSupportedFeatureError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC65E4C261353AE007412FA /* GuestUserUnSupportedFeatureError.swift */; };
+		DCF85AD126A5DACF005D4D8E /* ValidatorsModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF85AD026A5DACF005D4D8E /* ValidatorsModules.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -708,7 +714,6 @@
 		DC22D3B325DF417F0025ECF2 /* RestConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestConfigs.swift; sourceTree = "<group>"; };
 		DC22D3C825DF420B0025ECF2 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		DC22D3D025DF42560025ECF2 /* AppDelegate+Injection..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection..swift"; sourceTree = "<group>"; };
-		DC22D42325DFE8250025ECF2 /* AlamofireRestClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRestClientProtocol.swift; sourceTree = "<group>"; };
 		DC22D51825E015B40025ECF2 /* ExtensionsModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtensionsModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC22D53525E0161A0025ECF2 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		DC22D54925E0818B0025ECF2 /* NoInternetConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetConnectionError.swift; sourceTree = "<group>"; };
@@ -719,7 +724,6 @@
 		DC22D5D625E08E810025ECF2 /* OtherModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherModules.swift; sourceTree = "<group>"; };
 		DC22D60025E091F10025ECF2 /* AppRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRestClient.swift; sourceTree = "<group>"; };
 		DC22D66825E094CD0025ECF2 /* AppRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepo.swift; sourceTree = "<group>"; };
-		DC22D67B25E095520025ECF2 /* DependencyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyResolver.swift; sourceTree = "<group>"; };
 		DC22D69725E096CE0025ECF2 /* UnitTestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingAppDelegate.swift; sourceTree = "<group>"; };
 		DC22D6C425E11A7D0025ECF2 /* MainNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigatorProtocol.swift; sourceTree = "<group>"; };
 		DC22D6E125E11D810025ECF2 /* AppDelegateServicesModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateServicesModules.swift; sourceTree = "<group>"; };
@@ -784,6 +788,10 @@
 		DC520A90268FCC9100CE3F9A /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		DC520A91268FCC9100CE3F9A /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		DC520AA1268FCD5500CE3F9A /* ExamplesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesNavigator.swift; sourceTree = "<group>"; };
+		DC520AA62690898600CE3F9A /* NoCancelButtonSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCancelButtonSearchController.swift; sourceTree = "<group>"; };
+		DC520AAA269089AD00CE3F9A /* NoCancelButtonSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCancelButtonSearchBar.swift; sourceTree = "<group>"; };
+		DC520AB326909C7F00CE3F9A /* RealmDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStore.swift; sourceTree = "<group>"; };
+		DC520AB62690B78C00CE3F9A /* RealmDataStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStoreProtocol.swift; sourceTree = "<group>"; };
 		DC5F0B8225ECDB1F00BB70E3 /* RxRequestExecuter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRequestExecuter.swift; sourceTree = "<group>"; };
 		DC5F0B8325ECDB1F00BB70E3 /* RxRequestExecuterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxRequestExecuterProtocol.swift; sourceTree = "<group>"; };
 		DC5F0B9225ECDB9600BB70E3 /* RxSchedulers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSchedulers.swift; sourceTree = "<group>"; };
@@ -874,6 +882,7 @@
 		DC746A7826025C7500FFB663 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DC751A54268F339D007B9E7C /* NavigationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationServiceProtocol.swift; sourceTree = "<group>"; };
 		DC751A57268F341D007B9E7C /* NavigatableAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatableAppViewController.swift; sourceTree = "<group>"; };
+		DC7ACC19269245820075CFFE /* CustomEncodingAndDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEncodingAndDecodingStrategy.swift; sourceTree = "<group>"; };
 		DC801409261F58B1005363E1 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		DC8177B525EE5C10007C2228 /* CGAffineTransform+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extensions.swift"; sourceTree = "<group>"; };
 		DC81797F25F0F2D1007C2228 /* BaseLanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLanguageManager.swift; sourceTree = "<group>"; };
@@ -990,6 +999,7 @@
 		DCC65E4026133E5C007412FA /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		DCC65E4C261353AE007412FA /* GuestUserUnSupportedFeatureError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestUserUnSupportedFeatureError.swift; sourceTree = "<group>"; };
 		DCC65F9326149154007412FA /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
+		DCF85AD026A5DACF005D4D8E /* ValidatorsModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorsModules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1119,6 +1129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC520AB126909BE900CE3F9A /* RealmSwift in Frameworks */,
+				DC520AAF26909BE900CE3F9A /* Realm in Frameworks */,
 				DC9993252672949600402637 /* ServicesModule.framework in Frameworks */,
 				DC746A512601653800FFB663 /* RxRelay in Frameworks */,
 				DC746A4F2601653800FFB663 /* RxSwift in Frameworks */,
@@ -1194,7 +1206,6 @@
 			isa = PBXGroup;
 			children = (
 				DC22D3C825DF420B0025ECF2 /* Resolver.swift */,
-				DC22D67B25E095520025ECF2 /* DependencyResolver.swift */,
 				DC817AB325F5226C007C2228 /* ResolverArgs.swift */,
 			);
 			path = DI;
@@ -1243,6 +1254,7 @@
 				DC22D6E125E11D810025ECF2 /* AppDelegateServicesModules.swift */,
 				DC817A6C25F51869007C2228 /* DatasourceModules.swift */,
 				DC2E423E2679897900693C27 /* NavigationModules.swift */,
+				DCF85AD026A5DACF005D4D8E /* ValidatorsModules.swift */,
 			);
 			path = DIModules;
 			sourceTree = "<group>";
@@ -1435,6 +1447,7 @@
 			children = (
 				DC22DC9625E3ACD60025ECF2 /* SerializationServiceProtocol.swift */,
 				DC22DC9725E3ACD60025ECF2 /* SerializationService.swift */,
+				DC7ACC19269245820075CFFE /* CustomEncodingAndDecodingStrategy.swift */,
 			);
 			path = SerializationService;
 			sourceTree = "<group>";
@@ -1603,19 +1616,53 @@
 		DC520A82268FCB9600CE3F9A /* ExamplesFeature */ = {
 			isa = PBXGroup;
 			children = (
-				DC520A8F268FCC7B00CE3F9A /* CoreDataExample */,
+				DC520AAC269089FC00CE3F9A /* Validators */,
+				DC520AA4269087BF00CE3F9A /* Realm+ReactiveSearch */,
+				DC520A8F268FCC7B00CE3F9A /* CoreData */,
 				DC520A84268FCB9600CE3F9A /* Info.plist */,
 			);
 			path = ExamplesFeature;
 			sourceTree = "<group>";
 		};
-		DC520A8F268FCC7B00CE3F9A /* CoreDataExample */ = {
+		DC520A8F268FCC7B00CE3F9A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				DC520A91268FCC9100CE3F9A /* MyViewController.xib */,
 				DC520A90268FCC9100CE3F9A /* MyViewController.swift */,
 			);
-			path = CoreDataExample;
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		DC520AA4269087BF00CE3F9A /* Realm+ReactiveSearch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Realm+ReactiveSearch";
+			sourceTree = "<group>";
+		};
+		DC520AA52690897600CE3F9A /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				DC520AA62690898600CE3F9A /* NoCancelButtonSearchController.swift */,
+				DC520AAA269089AD00CE3F9A /* NoCancelButtonSearchBar.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		DC520AAC269089FC00CE3F9A /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		DC520AB226909C2800CE3F9A /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DC520AB326909C7F00CE3F9A /* RealmDataStore.swift */,
+				DC520AB62690B78C00CE3F9A /* RealmDataStoreProtocol.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		DC5F0A8425EBE22400BB70E3 /* Tabs */ = {
@@ -2136,6 +2183,7 @@
 				DC22D37125DEBFEB0025ECF2 /* RefreshToken */,
 				DC690B3C25DD3E4D004A88CA /* RequestExecutor */,
 				DC22D38725DEC71B0025ECF2 /* Utils */,
+				DC22D29E25DD44990025ECF2 /* AlamofireRestClient.swift */,
 				DC22D35B25DE9B570025ECF2 /* AlamofireRequestFactory.swift */,
 				DC22D38E25DECC350025ECF2 /* AFRequestInterceptor.swift */,
 				DC22D33F25DE8C0A0025ECF2 /* AlamofireError.swift */,
@@ -2146,8 +2194,6 @@
 		DC9993402672D0C500402637 /* AlamofireClient */ = {
 			isa = PBXGroup;
 			children = (
-				DC22D42325DFE8250025ECF2 /* AlamofireRestClientProtocol.swift */,
-				DC22D29E25DD44990025ECF2 /* AlamofireRestClient.swift */,
 			);
 			path = AlamofireClient;
 			sourceTree = "<group>";
@@ -2265,6 +2311,7 @@
 		DC9D26B625E562B1002B9A51 /* CustomComponentsModule */ = {
 			isa = PBXGroup;
 			children = (
+				DC520AA52690897600CE3F9A /* SearchBar */,
 				DC9D273825E65BF0002B9A51 /* Dialogs */,
 				DC2E427F2679FA4000693C27 /* NavigationController */,
 				DC2E427D2679FA2400693C27 /* TabBarController */,
@@ -2370,6 +2417,7 @@
 			children = (
 				DC520A48268FA4BE00CE3F9A /* LocalCaching */,
 				DC9141382656876A00DF6B28 /* Utils */,
+				DC520AB226909C2800CE3F9A /* Realm */,
 				DC6846D726037EBD00DC2FED /* CoreData */,
 				DC22DC7025E3AA2A0025ECF2 /* Rest */,
 				DC22D7C025E16BEF0025ECF2 /* DataSources */,
@@ -2801,6 +2849,8 @@
 				DC746A502601653800FFB663 /* RxRelay */,
 				DC746A522601653800FFB663 /* RxCocoa */,
 				DC746A542601653800FFB663 /* RxBlocking */,
+				DC520AAE26909BE900CE3F9A /* Realm */,
+				DC520AB026909BE900CE3F9A /* RealmSwift */,
 			);
 			productName = DataModule;
 			productReference = DCB83B9425DBF6E4008E9F63 /* DataModule.framework */;
@@ -2966,6 +3016,7 @@
 				DC746A4D2601653800FFB663 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				DC9993132672905E00402637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				DC8301C82680D5C700DB81F5 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				DC520AAD26909BE900CE3F9A /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = DCB83A4525DBE880008E9F63 /* Products */;
 			projectDirPath = "";
@@ -3351,6 +3402,7 @@
 				DC9992FD26728E2F00402637 /* Reachability.swift in Sources */,
 				DC99932C267298EC00402637 /* JWTService.swift in Sources */,
 				DC9992FC26728E2A00402637 /* InternetConnectivityService.swift in Sources */,
+				DC7ACC1A269245820075CFFE /* CustomEncodingAndDecodingStrategy.swift in Sources */,
 				DC99930026728E4500402637 /* SessionServiceProtocol.swift in Sources */,
 				DC6EB8A72677E4AF0011B995 /* MobileOperatorServiceProtocol.swift in Sources */,
 			);
@@ -3406,6 +3458,8 @@
 				DC6EF29A25FBC096002E94FE /* BaseCustomView.swift in Sources */,
 				DC69A62D2667EDF70060DCE2 /* BottomSheetConfigs.swift in Sources */,
 				DC87C3EE25EAAE9900914FAD /* OTPView.swift in Sources */,
+				DC520AA92690898C00CE3F9A /* NoCancelButtonSearchController.swift in Sources */,
+				DC520AAB269089AD00CE3F9A /* NoCancelButtonSearchBar.swift in Sources */,
 				DC69A5D026669C890060DCE2 /* Toast.swift in Sources */,
 				DC2E427B2679F9CE00693C27 /* PopUpViewController.swift in Sources */,
 				DC87C3CE25EAAE0600914FAD /* OTPTextField.swift in Sources */,
@@ -3438,6 +3492,7 @@
 				DCB83A4825DBE880008E9F63 /* AppDelegate.swift in Sources */,
 				DC22D5D725E08E810025ECF2 /* OtherModules.swift in Sources */,
 				DC22D5C325E08E610025ECF2 /* ServicesModules.swift in Sources */,
+				DCF85AD126A5DACF005D4D8E /* ValidatorsModules.swift in Sources */,
 				DC22D6E225E11D810025ECF2 /* AppDelegateServicesModules.swift in Sources */,
 				DC22D3D125DF42560025ECF2 /* AppDelegate+Injection..swift in Sources */,
 				DC22D5CD25E08E720025ECF2 /* RepositoriesModules.swift in Sources */,
@@ -3471,6 +3526,7 @@
 				DCC65E4D261353AE007412FA /* GuestUserUnSupportedFeatureError.swift in Sources */,
 				DC93DFA1261B22FC009AD708 /* SessionExpiredError.swift in Sources */,
 				DC5F0B9325ECDB9600BB70E3 /* RxSchedulers.swift in Sources */,
+				DC520AB426909C7F00CE3F9A /* RealmDataStore.swift in Sources */,
 				DC66C7A52628492D00418CC4 /* ResponseWithNilContentError.swift in Sources */,
 				DC817A4125F500B6007C2228 /* UnManagedCacheKey.swift in Sources */,
 				DC93E1B3261DECDF009AD708 /* FormError.swift in Sources */,
@@ -3521,9 +3577,9 @@
 				DC22D3B425DF417F0025ECF2 /* RestConfigs.swift in Sources */,
 				DC93DFA0261B22FC009AD708 /* AppError.swift in Sources */,
 				DC5F0B8425ECDB1F00BB70E3 /* RxRequestExecuter.swift in Sources */,
+				DC520AB72690B78C00CE3F9A /* RealmDataStoreProtocol.swift in Sources */,
 				DC93E1D5261DF621009AD708 /* CompositeError.swift in Sources */,
 				DC22DC6725E3A76B0025ECF2 /* APIRoute.swift in Sources */,
-				DC22D42425DFE8250025ECF2 /* AlamofireRestClientProtocol.swift in Sources */,
 				DC66C7492627AC2C00418CC4 /* APIBuilder.swift in Sources */,
 				DC520A4A268FA4CF00CE3F9A /* LocalDataStoreProtocol.swift in Sources */,
 				DC22D39D25DF3CDD0025ECF2 /* AlamofireFormDataExtensions.swift in Sources */,
@@ -3565,7 +3621,6 @@
 				DC22D70B25E125930025ECF2 /* ScopeFunctions.swift in Sources */,
 				DC520A32268F8DF000CE3F9A /* AppFont.swift in Sources */,
 				DC86AAD926810D3400C706BF /* DiffableCollectionViewAdapter.swift in Sources */,
-				DC22D67C25E095520025ECF2 /* DependencyResolver.swift in Sources */,
 				DC69A636266E88940060DCE2 /* SwizzlingUtils.swift in Sources */,
 				DC86AADD26810DAC00C706BF /* DiffableItem.swift in Sources */,
 				DC6EF2FD25FE1040002E94FE /* NFXSettingsController_iOS.swift in Sources */,
@@ -6100,6 +6155,14 @@
 				minimumVersion = 6.5.6;
 			};
 		};
+		DC520AAD26909BE900CE3F9A /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.9.0;
+			};
+		};
 		DC690B8725DD4065004A88CA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -6147,6 +6210,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DC22D6FE25E1253E0025ECF2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		DC520AAE26909BE900CE3F9A /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC520AAD26909BE900CE3F9A /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		DC520AB026909BE900CE3F9A /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC520AAD26909BE900CE3F9A /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 		DC690B8825DD4065004A88CA /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

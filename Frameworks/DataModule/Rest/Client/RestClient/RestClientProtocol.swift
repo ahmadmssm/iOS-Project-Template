@@ -17,4 +17,5 @@ public protocol RestClientProtocol {
     func cancelUploadRequests()
     func cancelDownloadRequests()
     func cancelAllRequests()
+    func createAPIRequestExecuter<T: APIRequestExecuterProtocol>() -> T
 }

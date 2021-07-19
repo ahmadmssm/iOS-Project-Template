@@ -17,7 +17,7 @@ public class TestViewController: CoreFeaturesViewController<TestViewModel> {
         super.render(obj: obj)
     }
     
-    @IBAction func action(_ sender: UIButton) {
+    @IBAction private func action(_ sender: UIButton) {
         self.navigator?.openCoreDataExample(from: self)
     }
 }

@@ -8,13 +8,13 @@
 import Alamofire
 import Foundation
 
-open class AlamofireRestClient: AlamofireRestClientProtocol {
+open class AlamofireRestClient: RestClientProtocol {
     
     // Configs related to any rest client, and not just Alamofire
     private let restConfigsProtocol: RestConfigsProtocol
     private lazy var alamofireSession = self.createAlamofireSession()
     private lazy var alamofireRequestFactory = self.createAlamofireRequestFactory()
-
+    
     public init(restConfigsProtocol: RestConfigsProtocol) {
         self.restConfigsProtocol = restConfigsProtocol
     }
@@ -71,13 +71,18 @@ open class AlamofireRestClient: AlamofireRestClientProtocol {
         return configuration
     }
     
-    open func getEventMonitorsList() -> [EventMonitor] {
+    public func createAPIRequestExecuter<T: APIRequestExecuterProtocol>() -> T {
+        return T(restConfigsProtocol: self.restConfigsProtocol,
+                 alamofireRequestFactory: self.alamofireRequestFactory)
+    }
+    
+    private func getEventMonitorsList() -> [EventMonitor] {
         var eventMonitors: [EventMonitor] = []
         eventMonitors.append(AlamofireLogger(loggingService: self.restConfigsProtocol.loggingService))
         return eventMonitors
     }
     
-    open func getRequestInterceptor() -> AFRequestInterceptor? {
+    private func getRequestInterceptor() -> AFRequestInterceptor? {
         let interceptor = AFRequestInterceptor()
             .set(additionalHeaders: self.getAdditionalHeaders())
             .set(additionalRequestIntercepters: getAdditionalRequestIntercepters())
@@ -85,19 +90,14 @@ open class AlamofireRestClient: AlamofireRestClientProtocol {
         return interceptor
     }
     
-    open func createAlamofireSession() -> Session {
+    private func createAlamofireSession() -> Session {
         return Session(configuration: self.getURLSessionConfiguration(),
                        interceptor: self.getRequestInterceptor(),
                        eventMonitors: self.getEventMonitorsList())
     }
     
-    open func createAlamofireRequestFactory() -> AlamofireRequestFactory {
+    private func createAlamofireRequestFactory() -> AlamofireRequestFactory {
         return AlamofireRequestFactory(baseURL: self.restConfigsProtocol.baseURL,
                                        alamofireSession: self.alamofireSession)
-    }
-    
-    public func createAPIRequestExecuter<T: APIRequestExecuterProtocol>() -> T {
-        return T(restConfigsProtocol: self.restConfigsProtocol,
-                 alamofireRequestFactory: self.alamofireRequestFactory)
     }
 }

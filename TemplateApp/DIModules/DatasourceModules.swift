@@ -12,9 +12,9 @@ extension Resolver {
     static func registerDataSourcesModules() {
         register { UserDefaultsDatasource(simpleDataCachingService: resolve()) }
         register { UnManagedDatasource(serializationService: resolve()) }.scope(.application)
-        register {
-            LocalCartDatasource(context: resolve(),
-                                serializationService: resolve()) as CartDataSource
-        }.scope(.application)
+//        register {
+//            LocalCartDatasource(context: resolve(),
+//                                serializationService: resolve()) as CartDataSource
+//        }.scope(.application)
     }
 }

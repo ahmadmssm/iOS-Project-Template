@@ -9,6 +9,16 @@ import UIKit
 
 public class AppNavigationController: UINavigationController, UINavigationControllerDelegate {
     
+    private lazy var gradientLayer: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        var bounds = navigationBar.bounds
+        bounds.size.height += UIApplication.shared.statusBarFrame.size.height
+        gradient.frame = bounds
+        gradient.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 0)
+        return gradient
+    }()
     private lazy var customBackBarButtonItem = {
         return UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }()
@@ -19,6 +29,9 @@ public class AppNavigationController: UINavigationController, UINavigationContro
         self.configureNavigationBarAppearance()
         self.navigationBar.isTranslucent = false
         self.navigationBar.shadowImage = UIImage()
+        if let image = UIImage.createFrom(gradientLayer: self.gradientLayer) {
+            navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
+        }
     }
     
     public func navigationController(_ navigationController: UINavigationController,

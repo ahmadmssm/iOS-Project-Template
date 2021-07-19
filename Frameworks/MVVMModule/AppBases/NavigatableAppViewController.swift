@@ -23,12 +23,12 @@ open class NavigatableAppViewController<VM: AppViewModel, Navigator>: AppViewCon
                               arg5: Any? = nil) -> Self {
         let viewController = Self.create()
         viewController.navigator = navigator
-        viewController.viewModel = DependencyResolver.resolveOptional(arg0: arg0,
-                                                                      arg1: arg1,
-                                                                      arg2: arg2,
-                                                                      arg3: arg3,
-                                                                      arg4: arg4,
-                                                                      arg5: arg5)
+        viewController.viewModel = Resolver.optional(arg0: arg0,
+                                                     arg1: arg1,
+                                                     arg2: arg2,
+                                                     arg3: arg3,
+                                                     arg4: arg4,
+                                                     arg5: arg5)
         return viewController
     }
     

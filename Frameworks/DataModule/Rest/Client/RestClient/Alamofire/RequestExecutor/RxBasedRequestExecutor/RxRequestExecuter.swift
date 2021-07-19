@@ -78,6 +78,43 @@ public class RxRequestExecuter: ClosureBasedRequestExecuter, RxRequestExecuterPr
         .observe(on: RxSchedulers.mainThread)
     }
     
+    open func execute(apiRequest: APIBuilder) -> Single<[String: Any]> {
+        return Single.create { [weak self] single -> Disposable in
+            /*
+             Used If - let - else instead of guard let to avoid writing
+             this line `return Disposables.create()` twice, one time inside the else branch of the guard
+             and the other time at the end of the success branch.
+             */
+            if let self = self {
+                self.execute(apiRequest: apiRequest) { (result: Result<Data, Error>) in
+                    switch result {
+                    case .success(let data):
+                        if let dict = self.serializationService.dataToDictionary(data: data) {
+                            single(.success(dict))
+                        }
+                        else {
+                            self.doOnError(UnKnownError()) { processedError in
+                                single(.failure(processedError))
+                            }
+                        }
+                    case .failure(let error):
+                        self.doOnError(error) { processedError in
+                            single(.failure(processedError))
+                        }
+                    }
+                }
+            }
+            else {
+                single(.failure(UnKnownError()))
+            }
+            return Disposables.create()
+        }
+        // All the requests will be done on the background thread by default -> subscribe(on),
+        // And the result will be on the UI thread.
+        .subscribe(on: RxSchedulers.workerThread)
+        .observe(on: RxSchedulers.mainThread)
+    }
+    
     open func execute<T: Decodable>(apiRequest: APIBuilder) -> Single<T> {
         return Single.create { [weak self] single -> Disposable in
             /*

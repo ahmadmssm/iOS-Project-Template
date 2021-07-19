@@ -21,6 +21,7 @@ extension Resolver: ResolverRegistering {
         registerAppDelegateServicesModules()
         registerNavigationModules()
         registerOtherModules()
+        registerValidatorsModules()
     }
     
     static func setResolverDefaultScope() {

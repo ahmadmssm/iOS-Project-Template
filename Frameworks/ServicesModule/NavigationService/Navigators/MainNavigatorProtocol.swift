@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol MainNavigatorProtocol: NavigationServiceProtocol {
+public protocol MainNavigatorProtocol: NavigationServiceProtocol, UIApplicationDelegate {
     var window: UIWindow! { get }
     func startInitialViewController()
     func openCoreDataExample(from viewController: UIViewController)

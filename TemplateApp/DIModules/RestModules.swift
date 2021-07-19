@@ -25,12 +25,11 @@ extension Resolver {
                          serializationService: resolve(),
                          loggingService: resolve()) as RefreshTokenProtocol
         }
-        register {  _ -> RestConfigsProtocol in
-            let baseURL = EnvironmentVariables.getBaseURL()
-            return RestConfigs(baseURL: baseURL,
-                               loggingService: resolve(),
-                               serializationService: resolve(),
-                               connectivityService: resolve())
+        register {
+            RestConfigs(baseURL: EnvironmentVariables.getBaseURL(),
+                        loggingService: resolve(),
+                        serializationService: resolve(),
+                        connectivityService: resolve()) as RestConfigsProtocol
         }
     }
     
@@ -41,7 +40,7 @@ extension Resolver {
                           localeRequestIntercepter: resolve()) as RestClientProtocol
         }
         register {  _ -> RxRequestExecuterProtocol in
-            let restClient: AlamofireRestClientProtocol = resolve()
+            let restClient: RestClientProtocol = resolve()
             let requestExecuter: RxRequestExecuter = restClient.createAPIRequestExecuter()
             return requestExecuter
         }.scope(.application)

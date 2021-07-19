@@ -7,9 +7,10 @@
 
 // enum and not class or struct, so it cannot be instantiated
 public enum Endpoints {
-    public static var refreshToken: String { "token/refresh" }
-    static var loginOTP: String { "otps/send" }
-    static var register: String { "register"}
-    static var logout: String { "logout"}
-    static var verifyOTP: String { "otps/verify" }
+    static var refreshToken: String { "/refresh/" }
+    static var worldCountries: String { "all" }
+    static var trendingMovies: String { "movie/popular" }
+    static var devicePublicIP: String { "?format=json2" }
+    static var locationCoordinates: String { "/" }
+    static var fiveDaysWeatherForecast: String { "/forecast" }
 }

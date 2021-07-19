@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private var appDelegateServices: [UIApplicationDelegate] = {
         // Should be the first thing
-        let defaultConfigs: AppDelegateDefaultConfigs = DependencyResolver.resolve()
-        let firebaseConfigs: AppDelegateFirebaseConfigs = DependencyResolver.resolve()
+        let defaultConfigs: AppDelegateDefaultConfigs = Resolver.resolve()
+        let firebaseConfigs: AppDelegateFirebaseConfigs = Resolver.resolve()
         // Should be the last thing.
-        let navigator: MainNavigator = DependencyResolver.resolve()
+        let navigator: MainNavigator = Resolver.resolve()
         return [defaultConfigs, firebaseConfigs, navigator]
     }()
     
@@ -26,5 +26,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             _ = $0.application?(application, didFinishLaunchingWithOptions: launchOptions)
         }
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        appDelegateServices.forEach { appDelegateService in
+            _ = appDelegateService.applicationDidBecomeActive?(application)
+        }
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        appDelegateServices.forEach { appDelegateService in
+            _ = appDelegateService.applicationWillResignActive?(application)
+        }
     }
 }
